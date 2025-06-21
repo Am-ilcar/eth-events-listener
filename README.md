@@ -42,9 +42,9 @@ Add the following dependency to your Maven project:
 
 ```xml
 <dependency>
-    <groupId>dev.amilcar</groupId>
-    <artifactId>java-eth-events-listener</artifactId>
-    <version>1.0</version>
+    <groupId>io.github.am-ilcar</groupId>
+    <artifactId>eth-events-listener</artifactId>
+    <version>1.0.1</version>
 </dependency>
 ```
 
