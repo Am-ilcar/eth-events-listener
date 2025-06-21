@@ -1,6 +1,6 @@
-package dev.amilcar.eth.events.client;
+package io.github.amilcar.eth.eventslistener.client;
 
-import dev.amilcar.eth.events.model.EventType;
+import io.github.amilcar.eth.eventslistener.model.EventType;
 
 import java.util.Set;
 
@@ -68,7 +68,7 @@ public class BeaconEventClientFactory {
     }
     
     /**
-     * Creates a new {@link BeaconEventClient} for the specified node URL and head events only.
+     * Creates a new {@link BeaconEventClient} for the specified node URL and head eventslistener only.
      *
      * @param nodeUrl the URL of the Ethereum node
      * @return a new {@link BeaconEventClient} instance
@@ -78,7 +78,7 @@ public class BeaconEventClientFactory {
     }
     
     /**
-     * Creates a new {@link BeaconEventClient} for the specified node URL and block events only.
+     * Creates a new {@link BeaconEventClient} for the specified node URL and block eventslistener only.
      *
      * @param nodeUrl the URL of the Ethereum node
      * @return a new {@link BeaconEventClient} instance
@@ -88,7 +88,7 @@ public class BeaconEventClientFactory {
     }
     
     /**
-     * Creates a new {@link BeaconEventClient} for the specified node URL and finalized checkpoint events only.
+     * Creates a new {@link BeaconEventClient} for the specified node URL and finalized checkpoint eventslistener only.
      *
      * @param nodeUrl the URL of the Ethereum node
      * @return a new {@link BeaconEventClient} instance
@@ -98,7 +98,7 @@ public class BeaconEventClientFactory {
     }
     
     /**
-     * Creates a new {@link BeaconEventClient} for the specified node URL and chain reorganization events only.
+     * Creates a new {@link BeaconEventClient} for the specified node URL and chain reorganization eventslistener only.
      *
      * @param nodeUrl the URL of the Ethereum node
      * @return a new {@link BeaconEventClient} instance

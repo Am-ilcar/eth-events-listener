@@ -1,9 +1,10 @@
-package dev.amilcar.eth.events.example;
+package io.github.amilcar.eth.eventslistener.example;
 
-import dev.amilcar.eth.events.client.BeaconEventClient;
-import dev.amilcar.eth.events.client.BeaconEventClientFactory;
-import dev.amilcar.eth.events.model.BeaconEvent;
-import dev.amilcar.eth.events.model.EventType;
+import io.github.amilcar.eth.eventslistener.client.BeaconEventClient;
+import io.github.amilcar.eth.eventslistener.client.BeaconEventClientBuilder;
+import io.github.amilcar.eth.eventslistener.client.BeaconEventClientFactory;
+import io.github.amilcar.eth.eventslistener.model.BeaconEvent;
+import io.github.amilcar.eth.eventslistener.model.EventType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,10 +29,10 @@ public class BeaconEventClientExample {
         // Replace with your Ethereum node URL
         String nodeUrl = "https://your-ethereum-node-url";
 
-        // Example 1: Create a client for head events only
-        logger.info("Creating client for head events only...");
+        // Example 1: Create a client for head eventslistener only
+        logger.info("Creating client for head eventslistener only...");
         try (BeaconEventClient headClient = BeaconEventClientFactory.createHeadEventClient(nodeUrl)) {
-            // Add a listener for head events
+            // Add a listener for head eventslistener
             headClient.addEventListener(EventType.HEAD, (BeaconEvent event) -> {
                 logger.info("Received head event: {}", event);
                 logger.info("Slot: {}", event.getData().get("slot").asText());
@@ -41,7 +42,7 @@ public class BeaconEventClientExample {
             // Start the client
             headClient.start();
 
-            // Wait for some events
+            // Wait for some eventslistener
             Thread.sleep(300);
         }
 
@@ -66,14 +67,14 @@ public class BeaconEventClientExample {
             // Start the client
             multiClient.start();
 
-            // Wait for some events
+            // Wait for some eventslistener
             Thread.sleep(300000);
         }
 
         // Example 3: Using the builder directly for more control
         CountDownLatch latch = new CountDownLatch(1);
 
-        BeaconEventClient customClient = new dev.amilcar.eth.events.client.BeaconEventClientBuilder()
+        BeaconEventClient customClient = new BeaconEventClientBuilder()
                 .nodeUrl(nodeUrl)
                 .addEventType(EventType.HEAD)
                 .build();

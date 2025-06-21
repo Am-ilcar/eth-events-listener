@@ -1,11 +1,11 @@
-package dev.amilcar.eth.events.client;
+package io.github.amilcar.eth.eventslistener.client;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dev.amilcar.eth.events.exception.BeaconEventException;
-import dev.amilcar.eth.events.listener.BeaconEventListener;
-import dev.amilcar.eth.events.model.BeaconEvent;
-import dev.amilcar.eth.events.model.EventType;
+import io.github.amilcar.eth.eventslistener.exception.BeaconEventException;
+import io.github.amilcar.eth.eventslistener.listener.BeaconEventListener;
+import io.github.amilcar.eth.eventslistener.model.BeaconEvent;
+import io.github.amilcar.eth.eventslistener.model.EventType;
 import okhttp3.OkHttpClient;
 import okhttp3.mockwebserver.MockWebServer;
 import org.junit.jupiter.api.AfterEach;

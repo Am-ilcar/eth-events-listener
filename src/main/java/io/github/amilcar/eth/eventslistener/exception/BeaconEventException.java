@@ -1,7 +1,7 @@
-package dev.amilcar.eth.events.exception;
+package io.github.amilcar.eth.eventslistener.exception;
 
 /**
- * Exception thrown when an error occurs while working with Ethereum Beacon Chain events.
+ * Exception thrown when an error occurs while working with Ethereum Beacon Chain eventslistener.
  */
 public class BeaconEventException extends RuntimeException {
     

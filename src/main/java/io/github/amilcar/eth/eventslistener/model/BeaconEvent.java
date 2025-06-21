@@ -1,4 +1,4 @@
-package dev.amilcar.eth.events.model;
+package io.github.amilcar.eth.eventslistener.model;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.annotation.JsonIgnore;

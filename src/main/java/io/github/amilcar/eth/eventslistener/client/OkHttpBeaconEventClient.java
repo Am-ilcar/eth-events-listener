@@ -1,11 +1,11 @@
-package dev.amilcar.eth.events.client;
+package io.github.amilcar.eth.eventslistener.client;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dev.amilcar.eth.events.exception.BeaconEventException;
-import dev.amilcar.eth.events.listener.BeaconEventListener;
-import dev.amilcar.eth.events.model.BeaconEvent;
-import dev.amilcar.eth.events.model.EventType;
+import io.github.amilcar.eth.eventslistener.exception.BeaconEventException;
+import io.github.amilcar.eth.eventslistener.listener.BeaconEventListener;
+import io.github.amilcar.eth.eventslistener.model.BeaconEvent;
+import io.github.amilcar.eth.eventslistener.model.EventType;
 import okhttp3.*;
 import okhttp3.sse.EventSource;
 import okhttp3.sse.EventSourceListener;
@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 public class OkHttpBeaconEventClient implements BeaconEventClient {
 
     private static final Logger logger = LoggerFactory.getLogger(OkHttpBeaconEventClient.class);
-    private static final String DEFAULT_EVENTS_ENDPOINT = "eth/v1/events";
+    private static final String DEFAULT_EVENTS_ENDPOINT = "eth/v1/eventslistener";
 
     private final String nodeUrl;
     private final String eventsEndpoint;
@@ -42,7 +42,7 @@ public class OkHttpBeaconEventClient implements BeaconEventClient {
      * Creates a new OkHttpBeaconEventClient with the specified parameters.
      *
      * @param nodeUrl the URL of the Ethereum node
-     * @param eventsEndpoint the endpoint for events (default is "/eth/v1/events")
+     * @param eventsEndpoint the endpoint for eventslistener (default is "/eth/v1/eventslistener")
      * @param httpClient the OkHttp client to use
      * @param objectMapper the Jackson ObjectMapper to use for JSON parsing
      */
@@ -246,7 +246,7 @@ public class OkHttpBeaconEventClient implements BeaconEventClient {
     }
 
     /**
-     * EventSourceListener implementation for handling SSE events.
+     * EventSourceListener implementation for handling SSE eventslistener.
      */
     private class BeaconEventSourceListener extends EventSourceListener {
 

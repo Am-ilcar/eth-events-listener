@@ -1,30 +1,30 @@
-package dev.amilcar.eth.events.client;
+package io.github.amilcar.eth.eventslistener.client;
 
-import dev.amilcar.eth.events.listener.BeaconEventListener;
-import dev.amilcar.eth.events.model.BeaconEvent;
-import dev.amilcar.eth.events.model.EventType;
+import io.github.amilcar.eth.eventslistener.listener.BeaconEventListener;
+import io.github.amilcar.eth.eventslistener.model.BeaconEvent;
+import io.github.amilcar.eth.eventslistener.model.EventType;
 
 import java.io.Closeable;
 import java.util.Set;
 
 /**
- * Client for subscribing to Ethereum Beacon Chain events.
+ * Client for subscribing to Ethereum Beacon Chain eventslistener.
  * This interface defines the main API for the library.
  */
 public interface BeaconEventClient extends Closeable {
     
     /**
-     * Subscribes to events of the specified types.
+     * Subscribes to eventslistener of the specified types.
      * 
-     * @param eventTypes the types of events to subscribe to
+     * @param eventTypes the types of eventslistener to subscribe to
      * @return this client instance for method chaining
      */
     BeaconEventClient subscribe(Set<EventType> eventTypes);
     
     /**
-     * Subscribes to events of the specified type.
+     * Subscribes to eventslistener of the specified type.
      * 
-     * @param eventType the type of events to subscribe to
+     * @param eventType the type of eventslistener to subscribe to
      * @return this client instance for method chaining
      */
     default BeaconEventClient subscribe(EventType eventType) {
@@ -32,9 +32,9 @@ public interface BeaconEventClient extends Closeable {
     }
     
     /**
-     * Adds a listener for events of the specified type.
+     * Adds a listener for eventslistener of the specified type.
      * 
-     * @param eventType the type of events to listen for
+     * @param eventType the type of eventslistener to listen for
      * @param listener the listener to add
      * @param <T> the type of event
      * @return this client instance for method chaining
@@ -42,9 +42,9 @@ public interface BeaconEventClient extends Closeable {
     <T extends BeaconEvent> BeaconEventClient addEventListener(EventType eventType, BeaconEventListener<T> listener);
     
     /**
-     * Removes a listener for events of the specified type.
+     * Removes a listener for eventslistener of the specified type.
      * 
-     * @param eventType the type of events to stop listening for
+     * @param eventType the type of eventslistener to stop listening for
      * @param listener the listener to remove
      * @param <T> the type of event
      * @return this client instance for method chaining
@@ -52,23 +52,23 @@ public interface BeaconEventClient extends Closeable {
     <T extends BeaconEvent> BeaconEventClient removeEventListener(EventType eventType, BeaconEventListener<T> listener);
     
     /**
-     * Starts listening for events.
-     * This method establishes the connection to the Ethereum node and begins receiving events.
+     * Starts listening for eventslistener.
+     * This method establishes the connection to the Ethereum node and begins receiving eventslistener.
      * 
      * @return this client instance for method chaining
      */
     BeaconEventClient start();
     
     /**
-     * Stops listening for events.
-     * This method closes the connection to the Ethereum node and stops receiving events.
+     * Stops listening for eventslistener.
+     * This method closes the connection to the Ethereum node and stops receiving eventslistener.
      * 
      * @return this client instance for method chaining
      */
     BeaconEventClient stop();
     
     /**
-     * Checks if the client is currently connected and listening for events.
+     * Checks if the client is currently connected and listening for eventslistener.
      * 
      * @return true if the client is connected, false otherwise
      */

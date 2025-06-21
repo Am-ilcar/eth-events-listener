@@ -1,9 +1,9 @@
-package dev.amilcar.eth.events.model;
+package io.github.amilcar.eth.eventslistener.model;
 
 import lombok.Getter;
 
 /**
- * Enum representing the different types of events that can be subscribed to
+ * Enum representing the different types of eventslistener that can be subscribed to
  * in the Ethereum Beacon Chain.
  */
 @Getter

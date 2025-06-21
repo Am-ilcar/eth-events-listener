@@ -1,7 +1,7 @@
-package dev.amilcar.eth.events.client;
+package io.github.amilcar.eth.eventslistener.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dev.amilcar.eth.events.model.EventType;
+import io.github.amilcar.eth.eventslistener.model.EventType;
 import okhttp3.OkHttpClient;
 
 import java.util.HashSet;
@@ -25,7 +25,7 @@ public class BeaconEventClientBuilder {
      */
     public BeaconEventClientBuilder() {
         // Default values
-        this.eventsEndpoint = "/eth/v1/events";
+        this.eventsEndpoint = "/eth/v1/eventslistener";
         this.httpClient = new OkHttpClient.Builder()
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
@@ -47,9 +47,9 @@ public class BeaconEventClientBuilder {
     }
     
     /**
-     * Sets the endpoint for events.
+     * Sets the endpoint for eventslistener.
      *
-     * @param eventsEndpoint the endpoint for events
+     * @param eventsEndpoint the endpoint for eventslistener
      * @return this builder instance for method chaining
      */
     public BeaconEventClientBuilder eventsEndpoint(String eventsEndpoint) {

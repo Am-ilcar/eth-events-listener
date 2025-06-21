@@ -1,10 +1,10 @@
-package dev.amilcar.eth.events.listener;
+package io.github.amilcar.eth.eventslistener.listener;
 
-import dev.amilcar.eth.events.model.BeaconEvent;
+import io.github.amilcar.eth.eventslistener.model.BeaconEvent;
 
 /**
- * Interface for listening to Ethereum Beacon Chain events.
- * Implementations of this interface will be notified when events are received.
+ * Interface for listening to Ethereum Beacon Chain eventslistener.
+ * Implementations of this interface will be notified when eventslistener are received.
  *
  * @param <T> the type of event to listen for
  */

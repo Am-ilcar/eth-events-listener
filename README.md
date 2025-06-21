@@ -53,10 +53,10 @@ Add the following dependency to your Maven project:
 ### Basic Usage
 
 ```java
-// Create a client for head events only
+// Create a client for head eventslistener only
 BeaconEventClient client = BeaconEventClientFactory.createHeadEventClient("http://localhost:5051");
 
-// Add a listener for head events
+// Add a listener for head eventslistener
 client.addEventListener(EventType.HEAD, (BeaconEvent event) -> {
     System.out.println("Received head event: " + event);
     System.out.println("Slot: " + event.getData().get("slot").asText());
