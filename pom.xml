@@ -6,11 +6,11 @@
 
     <groupId>io.github.am-ilcar</groupId>
     <artifactId>eth-events-listener</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>A professional library for listening to Ethereum Beacon Chain events via SSE</description>
+    <description>A library for listening to Ethereum Beacon Chain events via SSE</description>
     <url>https://github.com/Am-ilcar/eth-events-listener</url>
 
     <licenses>
