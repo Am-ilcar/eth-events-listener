@@ -25,7 +25,7 @@ public class BeaconEventClientBuilder {
      */
     public BeaconEventClientBuilder() {
         // Default values
-        this.eventsEndpoint = "/eth/v1/eventslistener";
+        this.eventsEndpoint = "/eth/v1/events";
         this.httpClient = new OkHttpClient.Builder()
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
